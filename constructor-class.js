@@ -1,19 +1,21 @@
 // 1 Create a Car class or function constructor that has the following properties: 
 //The Car class or function constructor should also have a method called toggleAvailability 
 //that changes the isAvailable property to its opposite value (true to false, false to true) 
-class Car{
-    constructor(make,model,year,isAvailable){
-        this.make=make
-        this.model=model
-        this.year=year
-        this.isAvailable=isAvailable
+class Car {
+    constructor(make, model, year, isAvailable) {
+      this.make = make;
+      this.model = model;
+      this.year = year;
+      this.isAvailable = isAvailable;
     }
-    toggleAvailability(){
-        console.log(`The ${this.make} is not available for rent`)
-    }
+  toggleAvailability() {
+    this.isAvailable = !this.isAvailable;
+  }
 }
-const car=new Car("toyota","camry",2020,"The car is available for rent")
-console .log(car.toggleAvailability());
+const toyota = new Car("Subaru", "Impreza", 2005, true);
+console.log(toyota.isAvailable);
+toyota.toggleAvailability();
+console.log(toyota.isAvailable);
 
 
 //2.  Create a Rental class or function constructor that has the following properties: 
